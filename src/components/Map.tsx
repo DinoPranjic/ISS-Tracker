@@ -6,7 +6,7 @@ import 'leaflet/dist/leaflet.css';
 
 function Map () {
   return(
-    <MapContainer center={[5.1461, 34.1595]} zoom={1} scrollWheelZoom={false} zoomControl={false}>
+    <MapContainer center={[5.1461, 34.1595]} zoom={1} scrollWheelZoom={false} zoomControl={false} dragging={false}>
       <TileLayer {...tileLayer} />
 
     </MapContainer>
