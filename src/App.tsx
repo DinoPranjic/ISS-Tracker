@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Map from './components/Map';
 import Header from './components/Header';
@@ -6,17 +6,30 @@ import styled from 'styled-components';
 
 
 function App() {
-  const url: string = 'http://api.open-notify.org/iss-now.json'
+//   const [latitude, setLatitude] = useState(0)
+//   const [longitude, setLongitude] = useState(0)
 
-  const getLocation = (url: string) => {
-    return fetch(url)
-  }
+//   const url: string = 'http://api.open-notify.org/iss-now.json'
 
-  getLocation(url).then(async result => {
-    const location = await result.json();
+//   const getLocation = (url: string) => {
+//     return fetch(url)
+//   }
 
-    console.log(location.iss_position);
-  })
+// const updateLocation = () => {
+//     getLocation(url).then(async result => {
+//       const location = await result.json();
+
+//       const parsedLatitude = await parseFloat(location.iss_position.latitude)
+//       const parsedLongitude = await parseFloat(location.iss_position.longitude)
+      
+//       setLatitude(parsedLatitude);
+//       setLongitude(parsedLongitude);
+
+
+//     });
+//   }
+
+//   setTimeout(updateLocation, 5000)
 
   return (
     <div className="App">
