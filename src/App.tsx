@@ -6,6 +6,17 @@ import styled from 'styled-components';
 
 
 function App() {
+  const url: string = 'http://api.open-notify.org/iss-now.json'
+
+  const getLocation = (url: string) => {
+    return fetch(url)
+  }
+
+  getLocation(url).then(async result => {
+    const location = await result.json();
+
+    console.log(location.iss_position);
+  })
 
   return (
     <div className="App">
