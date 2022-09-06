@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+
 function Header () {
+
   return(
     <HeaderContainer>
       <HeaderLeft>
@@ -25,6 +27,7 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   color: white;
   background-color: #202225;
+  opacity: 0.9;
 
 `
 
