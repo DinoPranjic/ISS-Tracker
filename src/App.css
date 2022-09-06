@@ -6,8 +6,9 @@
 }
 
 .leaflet-container {
-  width: 1000px; 
+  width: 600px; 
   height: 500px;
+  border: black 5px solid;
 }
 
 .iss-icon {
