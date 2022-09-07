@@ -13,7 +13,7 @@ const AppBody = styled.div`
 const App = () => {
   return (
     <MapProvider>
-      <Header />
+      {/* <Header /> */}
       <AppBody>
         <Sidebar />
         <Container />
