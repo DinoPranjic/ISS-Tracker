@@ -1,15 +1,16 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { tileLayer, issIcon } from '../util/constants';
+import { issIcon } from '../util/constants';
 import 'leaflet/dist/leaflet.css';
 import styled from 'styled-components';
 import { useMapContext } from '../context/mapContext';
+
 
 const Map = () => {
   const { mapState } = useMapContext();
   return(
     <MapView>
-      <MapContainer center={[5.1461, 34.1595]} zoom={1} scrollWheelZoom={false} zoomControl={false} attributionControl={false} >
-        <TileLayer {...tileLayer} />
+      <MapContainer center={[0,0]} zoom={1} scrollWheelZoom={false} zoomControl={false} attributionControl={false} >
+        <TileLayer {...mapState.tileLayer} />
           <Marker position={[mapState.coordinates.latitude as number, mapState.coordinates.longitude as number]} icon={issIcon}>
             <Popup>
               Current Coordinates: [{mapState.coordinates.latitude}, {mapState.coordinates.longitude}]
