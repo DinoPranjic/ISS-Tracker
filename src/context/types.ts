@@ -5,11 +5,20 @@ export interface ICoordinates {
   longitude: number;
 }
 
+export interface ITileLayer {
+  url: string,
+  maxZoom: number,
+  subdomains: string[],
+  key: string
+}
+
 export interface IMapContext {
   mapState: {
-    coordinates: ICoordinates
+    coordinates: ICoordinates,
+    tileLayer: ITileLayer
   };
   mapActions: {
-    setCoordinates: Dispatch<SetStateAction<ICoordinates>>
+    setCoordinates: Dispatch<SetStateAction<ICoordinates>>,
+    setTileLayer: Dispatch<SetStateAction<ITileLayer>>
   };
 }
