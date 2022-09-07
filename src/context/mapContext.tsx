@@ -1,5 +1,5 @@
 import React, { useState, useContext, createContext, FC } from 'react';
-import { ICoordinates, IMapContext } from './types';
+import { ICoordinates, IMapContext, ITileLayer } from './types';
 
 const MapContext = createContext<IMapContext | null>(null);
 
@@ -19,11 +19,20 @@ const MapProvider: any = ({ children }: any) => {
     longitude: 0
   });
 
+  const [tileLayer, setTileLayer] = useState<ITileLayer>({
+    url: 'http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3'],
+    key: 'terrain'
+  })
+
   const mapState = {
-    coordinates
+    coordinates,
+    tileLayer
   };
   const mapActions = {
-    setCoordinates
+    setCoordinates,
+    setTileLayer
   };
 
   return (
