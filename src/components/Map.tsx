@@ -8,7 +8,7 @@ const Map = () => {
   const { mapState } = useMapContext();
   return(
     <MapView>
-      <MapContainer center={[5.1461, 34.1595]} zoom={1} scrollWheelZoom={false} zoomControl={false} >
+      <MapContainer center={[5.1461, 34.1595]} zoom={1} scrollWheelZoom={false} zoomControl={false} attributionControl={false} >
         <TileLayer {...tileLayer} />
           <Marker position={[mapState.coordinates.latitude as number, mapState.coordinates.longitude as number]} icon={issIcon}>
             <Popup>
