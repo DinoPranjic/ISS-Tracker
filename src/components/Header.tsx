@@ -7,11 +7,11 @@ function Header () {
   return(
     <HeaderContainer>
       <HeaderLeft>
-        ISS Tracker
+        
       </HeaderLeft>
 
       <HeaderRight>
-        Github Logo here.
+        <i className="fa-brands fa-github"></i>
       </HeaderRight>
     </HeaderContainer>
   )
@@ -28,6 +28,7 @@ const HeaderContainer = styled.div`
   color: white;
   background-color: #202225;
   opacity: 0.8;
+  height: 5vh;
 
 `
 
