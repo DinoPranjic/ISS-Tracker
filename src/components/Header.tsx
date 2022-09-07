@@ -27,7 +27,7 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   color: white;
   background-color: #202225;
-  opacity: 0.9;
+  opacity: 0.8;
 
 `
 
