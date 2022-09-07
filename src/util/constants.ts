@@ -3,34 +3,38 @@ import L from 'leaflet';
 // 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 // https://stackoverflow.com/questions/9394190/leaflet-map-api-with-google-satellite-layer
 
-const tileLayer = {
-  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-  url: 'http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
-  subdomains:['mt0','mt1','mt2','mt3']
-};
+// const tileLayer = {
+//   attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+//   url: 'http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
+//   subdomains:['mt0','mt1','mt2','mt3']
+// };
 
 const streetLayer = {
   url: 'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
   maxZoom: 20,
-  subdomains:['mt0','mt1','mt2','mt3']
+  subdomains:['mt0','mt1','mt2','mt3'],
+  key: 'street'
 }
 
 const hybridLayer = {
   url: 'http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',
   maxZoom: 20,
-  subdomains:['mt0','mt1','mt2','mt3']
+  subdomains:['mt0','mt1','mt2','mt3'],
+  key: 'hybrid'
 }
 
 const satelliteLayer = {
   url: 'http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
   maxZoom: 20,
-  subdomains:['mt0','mt1','mt2','mt3']
+  subdomains:['mt0','mt1','mt2','mt3'],
+  key: 'satellite'
 }
 
 const terrainLayer = {
   url: 'http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
   maxZoom: 20,
-  subdomains:['mt0','mt1','mt2','mt3']
+  subdomains:['mt0','mt1','mt2','mt3'],
+  key: 'terrain'
 }
 
 const url: string = 'http://api.open-notify.org/iss-now.json';
@@ -48,7 +52,10 @@ const issIcon = new L.Icon({
 });
 
 export {
-  tileLayer,
   url,
-  issIcon
+  issIcon,
+  streetLayer,
+  hybridLayer,
+  satelliteLayer,
+  terrainLayer
 };
