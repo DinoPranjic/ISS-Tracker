@@ -11,14 +11,17 @@ export interface ITileLayer {
   subdomains: string[],
   key: string
 }
+export type Zoom = number;
 
 export interface IMapContext {
   mapState: {
     coordinates: ICoordinates,
-    tileLayer: ITileLayer
+    tileLayer: ITileLayer,
+    zoom: Zoom
   };
   mapActions: {
     setCoordinates: Dispatch<SetStateAction<ICoordinates>>,
-    setTileLayer: Dispatch<SetStateAction<ITileLayer>>
+    setTileLayer: Dispatch<SetStateAction<ITileLayer>>,
+    setZoom: Dispatch<SetStateAction<Zoom>>
   };
 }
