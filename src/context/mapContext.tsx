@@ -1,5 +1,5 @@
 import React, { useState, useContext, createContext, FC } from 'react';
-import { ICoordinates, IMapContext, ITileLayer } from './types';
+import { ICoordinates, IMapContext, ITileLayer, Zoom } from './types';
 
 const MapContext = createContext<IMapContext | null>(null);
 
@@ -26,13 +26,17 @@ const MapProvider: any = ({ children }: any) => {
     key: 'terrain'
   })
 
+  const [zoom, setZoom] = useState<Zoom>(1)
+
   const mapState = {
     coordinates,
-    tileLayer
+    tileLayer,
+    zoom
   };
   const mapActions = {
     setCoordinates,
-    setTileLayer
+    setTileLayer,
+    setZoom
   };
 
   return (
