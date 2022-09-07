@@ -5,8 +5,10 @@ import { useEffect, useState, useRef } from 'react';
 
 const MapContainer = styled.div`
 display: flex;
-height: 100vh;
+flex: 0.7;
+/* height: 100vh; */
 justify-content: center;
+align-items: center;
 `
 const Container = () => {
   useLocation();
