@@ -1,14 +1,12 @@
 .App {
+  display: flex;
   text-align: center;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .leaflet-container {
   width: 600px; 
   height: 500px;
-  border: black 5px solid;
+  border: black 2px solid;
   border-radius: 999%;
 }
 
