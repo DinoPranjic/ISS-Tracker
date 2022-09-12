@@ -4,13 +4,13 @@
 }
 
 .leaflet-container {
-  width: 500px; 
+  width: 550px; 
   height: 500px;
-  border: black 2px solid;
-  border-radius: 999%;
+  border: #36393F 2px solid;
+  border-radius: 5%;
 }
 
 .iss-icon {
   background: transparent;
-  border: none;  
+  border: none; 
 } 

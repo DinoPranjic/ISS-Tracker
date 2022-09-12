@@ -1,8 +1,12 @@
 import { Dispatch, SetStateAction } from "react";
 
-export interface ICoordinates {
-  latitude: number;
-  longitude: number;
+export interface IStatus{
+  latitude: number,
+  longitude: number,
+  altitude: number, 
+  velocity: number,
+  visibility: string,
+  timestamp: number
 }
 
 export interface ITileLayer {
@@ -11,17 +15,22 @@ export interface ITileLayer {
   subdomains: string[],
   key: string
 }
-export type Zoom = number;
+
+export interface ICenter {
+  latitude: number,
+  longitude: number,
+  key: string
+}
 
 export interface IMapContext {
   mapState: {
-    coordinates: ICoordinates,
     tileLayer: ITileLayer,
-    zoom: Zoom
+    center: ICenter,
+    status: IStatus
   };
   mapActions: {
-    setCoordinates: Dispatch<SetStateAction<ICoordinates>>,
     setTileLayer: Dispatch<SetStateAction<ITileLayer>>,
-    setZoom: Dispatch<SetStateAction<Zoom>>
+    setCenter: Dispatch<SetStateAction<ICenter>>,
+    setStatus: Dispatch<SetStateAction<IStatus>>
   };
 }

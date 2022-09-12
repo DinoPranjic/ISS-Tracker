@@ -1,14 +1,5 @@
 import L from 'leaflet';
 
-// 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-// https://stackoverflow.com/questions/9394190/leaflet-map-api-with-google-satellite-layer
-
-// const tileLayer = {
-//   attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-//   url: 'http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
-//   subdomains:['mt0','mt1','mt2','mt3']
-// };
-
 const streetLayer = {
   url: 'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
   maxZoom: 20,
@@ -37,7 +28,7 @@ const terrainLayer = {
   key: 'terrain'
 }
 
-const url: string = 'http://api.open-notify.org/iss-now.json';
+const url: string = 'https://api.wheretheiss.at/v1/satellites/25544'
 
 const issIcon = new L.Icon({
   iconUrl: require('../img/icon.png'),

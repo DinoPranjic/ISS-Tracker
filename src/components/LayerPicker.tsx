@@ -29,7 +29,7 @@ const LayerPicker = () => {
 
   return (
     <LayerPickerContainer>
-      View: <span onClick={() => {changeView(streetLayer)}}>Street</span> | <span onClick={() => {changeView(hybridLayer)}}>Hybrid</span> | <span onClick={() => {changeView(satelliteLayer)}}>Satellite</span> | <span onClick={() => {changeView(terrainLayer)}}>Terrain</span>
+      <p><strong>View:</strong> <span onClick={() => {changeView(streetLayer)}}>Street</span> | <span onClick={() => {changeView(hybridLayer)}}>Hybrid</span> | <span onClick={() => {changeView(satelliteLayer)}}>Satellite</span> | <span onClick={() => {changeView(terrainLayer)}}>Terrain</span></p>
     </LayerPickerContainer>
   )
 }
