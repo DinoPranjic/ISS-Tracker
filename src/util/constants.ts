@@ -42,11 +42,16 @@ const issIcon = new L.Icon({
   className: 'iss-icon'
 });
 
+const openGithub = () => {
+  window.open('https://github.com/DinoPranjic/ISS-Tracker', '_blank', 'noopener,noreferrer')
+}
+
 export {
   url,
   issIcon,
   streetLayer,
   hybridLayer,
   satelliteLayer,
-  terrainLayer
+  terrainLayer,
+  openGithub
 };

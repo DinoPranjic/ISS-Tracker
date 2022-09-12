@@ -2,6 +2,7 @@ import styled from "styled-components";
 import LayerPicker from "./LayerPicker";
 import CenterControl from "./CenterControl";
 import Status from "./Status";
+import { openGithub } from "../util/constants";
 
 const SidebarContainer = styled.div`
   background-color: #202225;
@@ -57,7 +58,7 @@ const Sidebar = () => {
     <SidebarContainer>
       <SidebarHeader>
         <strong>ISS Tracker</strong>
-        <i className="fa-brands fa-github"></i>
+        <i className="fa-brands fa-github" onClick={openGithub}></i>
           </SidebarHeader>
             <hr />
             <p>Drag the map to move around. Zoom in or out with scroll wheel. Results update every 5 seconds.</p>
