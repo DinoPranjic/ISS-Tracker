@@ -1,28 +1,29 @@
 import L from 'leaflet';
+import { ITileLayer, LayerURLs } from '../context/types';
 
-const streetLayer = {
-  url: 'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
+const streetLayer: ITileLayer = {
+  url: LayerURLs.street,
   maxZoom: 20,
   subdomains:['mt0','mt1','mt2','mt3'],
   key: 'street'
 }
 
-const hybridLayer = {
-  url: 'http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',
+const hybridLayer: ITileLayer = {
+  url: LayerURLs.hybrid,
   maxZoom: 20,
   subdomains:['mt0','mt1','mt2','mt3'],
   key: 'hybrid'
 }
 
-const satelliteLayer = {
-  url: 'http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+const satelliteLayer: ITileLayer = {
+  url: LayerURLs.satellite,
   maxZoom: 20,
   subdomains:['mt0','mt1','mt2','mt3'],
   key: 'satellite'
 }
 
-const terrainLayer = {
-  url: 'http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
+const terrainLayer: ITileLayer = {
+  url: LayerURLs.terrain,
   maxZoom: 20,
   subdomains:['mt0','mt1','mt2','mt3'],
   key: 'terrain'

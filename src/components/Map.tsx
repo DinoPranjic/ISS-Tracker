@@ -16,9 +16,9 @@ const Map = () => {
   
   return(
     <MapView>
-      <MapContainer center={[mapState.center.latitude as number, mapState.center.longitude as number]} key={mapState.center.key} zoom={1} scrollWheelZoom={true} zoomControl={true} attributionControl={false}>
+      <MapContainer center={[mapState.center.latitude, mapState.center.longitude]} key={mapState.center.key} zoom={1} scrollWheelZoom={true} zoomControl={true} attributionControl={false}>
         <TileLayer {...mapState.tileLayer} />
-          <Marker position={[mapState.status.latitude as number, mapState.status.longitude as number]} icon={issIcon} />
+          <Marker position={[mapState.status.latitude, mapState.status.longitude]} icon={issIcon} />
       </MapContainer>
       
     </MapView>

@@ -1,5 +1,5 @@
 import { useState, useContext, createContext } from 'react';
-import { IMapContext, ITileLayer, ICenter, IStatus } from './types';
+import { IMapContext, ITileLayer, ICenter, IStatus, LayerURLs } from './types';
 
 const MapContext = createContext<IMapContext | null>(null);
 
@@ -24,7 +24,7 @@ const MapProvider: any = ({ children }: any) => {
   })
 
   const [tileLayer, setTileLayer] = useState<ITileLayer>({
-    url: 'http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
+    url: LayerURLs.terrain,
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3'],
     key: 'terrain'

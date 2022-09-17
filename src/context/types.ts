@@ -10,11 +10,20 @@ export interface IStatus{
 }
 
 export interface ITileLayer {
-  url: string,
+  url: LayerURLs.street | LayerURLs.hybrid | LayerURLs.satellite | LayerURLs.terrain,
   maxZoom: number,
-  subdomains: string[],
+  subdomains: LayerSubDomains,
   key: string
 }
+
+export enum LayerURLs {
+  street = 'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
+  hybrid = 'http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',
+  satellite = 'http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+  terrain = 'http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}'
+}
+
+export type LayerSubDomains = ['mt0','mt1','mt2','mt3']
 
 export interface ICenter {
   latitude: number,
