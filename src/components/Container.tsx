@@ -4,10 +4,10 @@ import useStatus from "../hooks/useStatus";
 
 
 const MapContainer = styled.div`
-display: flex;
-flex: 0.6;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex: 0.6;
+  justify-content: center;
+  align-items: center;
 `
 const Container = () => {
   useStatus();

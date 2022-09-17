@@ -35,16 +35,9 @@ const issIcon = new L.Icon({
   iconRetinaUrl: require('../img/icon.png'),
   iconAnchor: new L.Point(0, 0),
   popupAnchor: new L.Point(16, 0),
-  // shadowUrl: null,
-  // shadowSize: null,
-  // shadowAnchor: null,
   iconSize: new L.Point(32, 32),
   className: 'iss-icon'
 });
-
-const openGithub = () => {
-  window.open('https://github.com/DinoPranjic/ISS-Tracker', '_blank', 'noopener,noreferrer')
-}
 
 export {
   url,
@@ -53,5 +46,4 @@ export {
   hybridLayer,
   satelliteLayer,
   terrainLayer,
-  openGithub
 };
