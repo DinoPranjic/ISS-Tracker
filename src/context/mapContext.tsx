@@ -1,5 +1,5 @@
 import { useState, useContext, createContext, ReactNode } from 'react';
-import { IMapContext, ITileLayer, ICenter, IStatus, LayerURLs } from './types';
+import { IMapContext, ITileLayer, ICenter, IStatus, LayerURLs, LayerKeys } from './types';
 
 const MapContext = createContext<IMapContext | null>(null);
 
@@ -27,7 +27,7 @@ const MapProvider = ({ children }: { children?: ReactNode }) => {
     url: LayerURLs.terrain,
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3'],
-    key: 'terrain'
+    key: LayerKeys.terrain
   })
 
   const [center, setCenter] = useState<ICenter>({

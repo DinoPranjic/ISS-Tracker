@@ -18,11 +18,18 @@ export enum LayerURLs {
 
 export type LayerSubDomains = ['mt0','mt1','mt2','mt3']
 
+export enum LayerKeys {
+  street = 'street',
+  hybrid = 'hybrid',
+  satellite = 'satellite',
+  terrain = 'terrain'
+}
+
 export interface ITileLayer {
   url: LayerURLs,
   maxZoom: number,
   subdomains: LayerSubDomains,
-  key: string
+  key: LayerKeys
 }
 
 export interface ICenter {
