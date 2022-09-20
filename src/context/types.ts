@@ -9,13 +9,6 @@ export interface IStatus{
   timestamp: number
 }
 
-export interface ITileLayer {
-  url: LayerURLs.street | LayerURLs.hybrid | LayerURLs.satellite | LayerURLs.terrain,
-  maxZoom: number,
-  subdomains: LayerSubDomains,
-  key: string
-}
-
 export enum LayerURLs {
   street = 'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
   hybrid = 'http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',
@@ -24,6 +17,13 @@ export enum LayerURLs {
 }
 
 export type LayerSubDomains = ['mt0','mt1','mt2','mt3']
+
+export interface ITileLayer {
+  url: LayerURLs,
+  maxZoom: number,
+  subdomains: LayerSubDomains,
+  key: string
+}
 
 export interface ICenter {
   latitude: number,

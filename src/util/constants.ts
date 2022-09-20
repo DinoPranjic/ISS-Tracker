@@ -1,31 +1,33 @@
 import L from 'leaflet';
-import { ITileLayer, LayerURLs } from '../context/types';
+import { ITileLayer, LayerURLs, LayerSubDomains } from '../context/types';
+
+const subdomains: LayerSubDomains = ['mt0','mt1','mt2','mt3'];
 
 const streetLayer: ITileLayer = {
   url: LayerURLs.street,
   maxZoom: 20,
-  subdomains:['mt0','mt1','mt2','mt3'],
+  subdomains,
   key: 'street'
 }
 
 const hybridLayer: ITileLayer = {
   url: LayerURLs.hybrid,
   maxZoom: 20,
-  subdomains:['mt0','mt1','mt2','mt3'],
+  subdomains,
   key: 'hybrid'
 }
 
 const satelliteLayer: ITileLayer = {
   url: LayerURLs.satellite,
   maxZoom: 20,
-  subdomains:['mt0','mt1','mt2','mt3'],
+  subdomains,
   key: 'satellite'
 }
 
 const terrainLayer: ITileLayer = {
   url: LayerURLs.terrain,
   maxZoom: 20,
-  subdomains:['mt0','mt1','mt2','mt3'],
+  subdomains,
   key: 'terrain'
 }
 

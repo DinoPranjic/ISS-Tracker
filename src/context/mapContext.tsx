@@ -1,4 +1,4 @@
-import { useState, useContext, createContext } from 'react';
+import { useState, useContext, createContext, ReactNode } from 'react';
 import { IMapContext, ITileLayer, ICenter, IStatus, LayerURLs } from './types';
 
 const MapContext = createContext<IMapContext | null>(null);
@@ -13,7 +13,7 @@ const useMapContext = () => {
   return context;
 }
 
-const MapProvider: any = ({ children }: any) => {
+const MapProvider = ({ children }: { children?: ReactNode }) => {
   const [status, setStatus] = useState<IStatus>({
     latitude: 0,
     longitude: 0,
