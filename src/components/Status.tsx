@@ -10,15 +10,6 @@ const StatusContainer = styled.div`
 const Status = () => {
   const { mapState } = useMapContext();
 
-  const timestamp = new Date(mapState.status.timestamp * 1000)
-  const hours = timestamp.getHours();
-
-  const minutes = "0" + timestamp.getMinutes();
-
-  const seconds = "0" + timestamp.getSeconds();
-
-  const formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
-
   return(
     <StatusContainer>
       <p><strong>Current Position:</strong> [{mapState.status.latitude.toFixed(2)}, {mapState.status.longitude.toFixed(2)}]</p>
