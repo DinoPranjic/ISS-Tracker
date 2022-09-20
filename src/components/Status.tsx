@@ -15,8 +15,7 @@ const Status = () => {
       <p><strong>Current Position:</strong> [{mapState.status.latitude.toFixed(2)}, {mapState.status.longitude.toFixed(2)}]</p>
       <p><strong>Current Altitude:</strong> {mapState.status.altitude.toFixed(2)} km</p>
       <p><strong>Current Speed:</strong> {mapState.status.velocity.toFixed(2)} km/h</p>
-      {/* <p><strong>Current Time:</strong> {formattedTime}</p> */}
-      <p>The ISS is currently in {mapState.status.visibility === 'daylight' ? (<span><strong>daylight.</strong></span>) : (<span><strong>the Earth's shadow.</strong></span>)}</p>
+      <p>The ISS is currently in {mapState.status.visibility === 'daylight' ? (<strong>daylight.</strong>) : (<strong>the Earth's shadow.</strong>)}</p>
     </StatusContainer>
   )
 }
