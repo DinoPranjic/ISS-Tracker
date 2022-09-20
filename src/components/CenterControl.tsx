@@ -4,7 +4,8 @@ import { useMapContext } from "../context/mapContext";
 const CenterControlContainer = styled.div`
   margin-left: 0.5vw;
 
-  span {
+  button {
+    all: unset;
     cursor: pointer;
 
     :hover {
@@ -26,7 +27,7 @@ const CenterControl = () => {
 
   return(
     <CenterControlContainer>
-      <p><strong>Center:</strong> <span onClick={() => {changeCenter(mapState.status.latitude, mapState.status.longitude, 'iss')}}>ISS</span> | <span onClick={() => {changeCenter(0, 0, 'center')}}>Center of Map</span></p>
+      <p><strong>Center:</strong> <button onClick={() => {changeCenter(mapState.status.latitude, mapState.status.longitude, 'iss')}}>ISS</button> | <button onClick={() => {changeCenter(0, 0, 'center')}}>Center of Map</button></p>
     </CenterControlContainer>
   )
 }
