@@ -25,7 +25,8 @@ const useStatus = () => {
         altitude: parsedAltitude,
         velocity: parsedVelocity,
         visibility: iss.visibility,
-        timestamp: parsedTimestamp
+        timestamp: parsedTimestamp,
+        loading: false
       });
 
     });

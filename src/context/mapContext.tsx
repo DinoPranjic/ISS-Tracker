@@ -20,7 +20,8 @@ const MapProvider = ({ children }: { children?: ReactNode }) => {
     altitude: 0,
     velocity: 0,
     visibility: '',
-    timestamp: 0
+    timestamp: 0,
+    loading: true
   })
 
   const [tileLayer, setTileLayer] = useState<ITileLayer>({

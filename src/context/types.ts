@@ -6,7 +6,8 @@ export interface IStatus{
   altitude: number, 
   velocity: number,
   visibility: string,
-  timestamp: number
+  timestamp: number,
+  loading: Boolean
 }
 
 export enum LayerURLs {
