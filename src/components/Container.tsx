@@ -6,7 +6,6 @@ import { useMapContext } from '../context/mapContext';
 
 const MapContainer = styled.div`
   display: flex;
-  flex: 0.6;
   justify-content: center;
   align-items: center;
 `
@@ -16,10 +15,10 @@ const Container = () => {
 
   return(
     <>
-    {mapState.status.loading ? <p>loading...</p> : 
+    {mapState.status.loading ? <MapContainer><p>loading...</p></MapContainer> : 
         <MapContainer>
-        <Map />
-      </MapContainer> 
+          <Map />
+        </MapContainer> 
     }
     </>
   )

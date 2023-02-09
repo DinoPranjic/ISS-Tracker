@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { MapProvider } from './context/mapContext';
 import Container from './components/Container';
 import Sidebar from './components/Sidebar';
+import Map from './components/Map';
 
 const AppBody = styled.div`
   display: flex;
@@ -15,15 +16,24 @@ const AppBody = styled.div`
   margin-right: 2.5vw; */
   border: black 1px solid;
   border-radius: 1%;
+`
+
+const Wrapper = styled.div`
+  padding-left: 100px;
+  padding-right: 100px;
+  margin: 0 auto;
 
 `
 const App = () => {
   return (
     <MapProvider>
-      <AppBody>
+      <Wrapper>
+        <Container />
+      </Wrapper>
+      {/* <AppBody>
         <Sidebar />
         <Container />
-      </AppBody>
+      </AppBody> */}
     </MapProvider>
   );
 }
