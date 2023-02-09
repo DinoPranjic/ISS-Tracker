@@ -1,9 +1,8 @@
 import './App.css';
 import styled from 'styled-components';
-import { MapProvider } from './context/mapContext';
-import Container from './components/Container';
-import Sidebar from './components/Sidebar';
-import Map from './components/Map';
+import { MapProvider, useMapContext } from './context/mapContext';
+import AppContainer from './components/AppContainer';
+import Header from './components/Header';
 
 const AppBody = styled.div`
   display: flex;
@@ -22,18 +21,14 @@ const Wrapper = styled.div`
   padding-left: 100px;
   padding-right: 100px;
   margin: 0 auto;
-
 `
 const App = () => {
   return (
     <MapProvider>
+      <Header />
       <Wrapper>
-        <Container />
+        <AppContainer />
       </Wrapper>
-      {/* <AppBody>
-        <Sidebar />
-        <Container />
-      </AppBody> */}
     </MapProvider>
   );
 }

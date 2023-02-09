@@ -25,7 +25,7 @@ const MapProvider = ({ children }: { children?: ReactNode }) => {
   })
 
   const [tileLayer, setTileLayer] = useState<ITileLayer>({
-    url: LayerURLs.terrain,
+    url: LayerURLs.street,
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3'],
     key: LayerKeys.terrain

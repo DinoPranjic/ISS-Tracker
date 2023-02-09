@@ -6,8 +6,6 @@ import { useMapContext } from '../context/mapContext';
 
 const MapView = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
 
 `
 
