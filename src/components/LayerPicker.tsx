@@ -4,20 +4,35 @@ import { streetLayer, hybridLayer, satelliteLayer, terrainLayer } from '../util/
 import { ITileLayer } from "../context/types";
 
 const LayerPickerContainer = styled.div`
-  margin-left: 0.5vw;
+  display: flex;
 
-  button {
-    all: unset;
-    cursor: pointer;
+`
 
-    :hover {
-      opacity: 0.8;
-    }
+const Title = styled.h2`
+  font-size: 20px;
+  font-weight: bold;
+`
+
+const LayerButton = styled.button`
+  cursor: pointer;
+  background: #0072ff;
+  border-radius: 32px;
+  border: none;
+  height: 20px;
+  padding: 0 10px;
+  margin-top: 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+
+  :hover {
+    background:#0050b3;
   }
+`
 
-
-
-
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
 const LayerPicker = () => {
@@ -34,7 +49,15 @@ const LayerPicker = () => {
 
   return (
     <LayerPickerContainer>
-      <p><strong>View:</strong> <button onClick={() => {changeView(streetLayer)}}>Street</button> | <button onClick={() => {changeView(hybridLayer)}}>Hybrid</button> | <button onClick={() => {changeView(satelliteLayer)}}>Satellite</button> | <button onClick={() => {changeView(terrainLayer)}}>Terrain</button></p>
+      <ButtonContainer>
+      <LayerButton>Street</LayerButton>
+      <LayerButton>Terrain</LayerButton>
+      <LayerButton>Satellite</LayerButton>
+      <LayerButton>Hybrid</LayerButton>
+      </ButtonContainer>
+
+
+      {/* <p><strong>View:</strong> <button onClick={() => {changeView(streetLayer)}}>Street</button> | <button onClick={() => {changeView(hybridLayer)}}>Hybrid</button> | <button onClick={() => {changeView(satelliteLayer)}}>Satellite</button> | <button onClick={() => {changeView(terrainLayer)}}>Terrain</button></p> */}
     </LayerPickerContainer>
   )
 }

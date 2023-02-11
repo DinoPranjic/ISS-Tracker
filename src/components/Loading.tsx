@@ -8,8 +8,10 @@ const LoadingContainer = styled.div`
 `;
 
 const LoadingMessage = styled.h2`
-  color: #fff;
+  color: black;
   font-size: 28px;
+  -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1px;
 `
 
 const LoadingIcon = styled.span`

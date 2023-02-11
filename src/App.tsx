@@ -18,8 +18,8 @@ const AppBody = styled.div`
 `
 
 const Wrapper = styled.div`
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
   margin: 0 auto;
 `
 const App = () => {

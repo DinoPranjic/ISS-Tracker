@@ -8,8 +8,10 @@ const HeaderContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  color: #fff;
+  color: black;
   font-size: 36px;
+  -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1px;
 `
 const Header = () => {
   return(
