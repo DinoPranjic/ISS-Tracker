@@ -5,6 +5,7 @@ import { ITileLayer } from "../context/types";
 
 const LayerPickerContainer = styled.div`
   display: flex;
+  justify-content: center;
 
 `
 
@@ -19,7 +20,7 @@ const LayerButton = styled.button`
   border-radius: 32px;
   border: none;
   height: 30px;
-  padding: 0 10px;
+  padding: 0 20px;
   margin-top: 5px;
   color: #fff;
   font-size: 18px;
@@ -33,6 +34,7 @@ const LayerButton = styled.button`
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 `
 
 const LayerPicker = () => {

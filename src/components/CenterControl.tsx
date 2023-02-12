@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useMapContext } from "../context/mapContext";
+import { useState } from 'react';
 
 const CenterControlContainer = styled.div`
   margin-left: 0.5vw;
@@ -16,6 +17,19 @@ const CenterControlContainer = styled.div`
 
 const CenterControl = () => {
   const { mapState, mapActions } = useMapContext();
+  const [checked, SetChecked] = useState(false);
+
+  const handleCheck = () => {
+    SetChecked(prevCheck => !prevCheck)
+
+    if (checked === true) {
+      changeCenter(mapState.center.latitude, mapState.center.longitude, 'iss');
+    } 
+    
+    if (checked === false) {
+      changeCenter(0, 0, 'center');
+    }
+  };
 
   const changeCenter = (lat: number, long: number, key: string) => {
     mapActions.setCenter({
@@ -27,7 +41,8 @@ const CenterControl = () => {
 
   return(
     <CenterControlContainer>
-      <p><strong>Center:</strong> <button onClick={() => {changeCenter(mapState.status.latitude, mapState.status.longitude, 'iss')}}>ISS</button> | <button onClick={() => {changeCenter(0, 0, 'center')}}>Center of Map</button></p>
+      <input type={'checkbox'} checked={checked} onChange={handleCheck}></input>
+      {/* <p><strong>Center:</strong> <button onClick={() => {changeCenter(mapState.status.latitude, mapState.status.longitude, 'iss')}}>ISS</button> | <button onClick={() => {changeCenter(0, 0, 'center')}}>Center of Map</button></p> */}
     </CenterControlContainer>
   )
 }

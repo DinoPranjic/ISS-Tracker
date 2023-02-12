@@ -5,6 +5,7 @@ import { useMapContext } from '../context/mapContext';
 import Loading from "./Loading";
 import Status from "./Status";
 import LayerPicker from "./LayerPicker";
+import CenterControl from "./CenterControl";
 
 const MainContainer = styled.div`
   display: flex;
@@ -28,7 +29,7 @@ const ControlContainer = styled.div`
   opacity: 0.8;
 
   hr {
-    border: 1px solid black;
+    border: 0.5px solid black;
     width: 100%;
   }
 `;
@@ -57,6 +58,7 @@ const AppContainer = () => {
           <hr />
           <Title>Map View</Title>
           <LayerPicker />
+          {/* <CenterControl /> */}
         </ControlContainer>
       <MapContainer>
         <Map />
