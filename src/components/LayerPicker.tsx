@@ -18,7 +18,7 @@ const LayerButton = styled.button`
   background: #0072ff;
   border-radius: 32px;
   border: none;
-  height: 20px;
+  height: 30px;
   padding: 0 10px;
   margin-top: 5px;
   color: #fff;
@@ -50,10 +50,10 @@ const LayerPicker = () => {
   return (
     <LayerPickerContainer>
       <ButtonContainer>
-      <LayerButton>Street</LayerButton>
-      <LayerButton>Terrain</LayerButton>
-      <LayerButton>Satellite</LayerButton>
-      <LayerButton>Hybrid</LayerButton>
+      <LayerButton onClick={() => {changeView(streetLayer)}}>Street</LayerButton>
+      <LayerButton onClick={() => {changeView(terrainLayer)}}>Terrain</LayerButton>
+      <LayerButton onClick={() => {changeView(satelliteLayer)}}>Satellite</LayerButton>
+      <LayerButton onClick={() => {changeView(hybridLayer)}}>Hybrid</LayerButton>
       </ButtonContainer>
 
 
