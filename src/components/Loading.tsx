@@ -12,7 +12,7 @@ const LoadingMessage = styled.h2`
   font-size: 28px;
   -webkit-text-fill-color: #fff;
     -webkit-text-stroke: 1px;
-`
+`;
 
 const LoadingIcon = styled.span`
   font-size: 28px;
@@ -28,7 +28,7 @@ const LoadingIcon = styled.span`
     transform: rotate(359deg);
   }
 }
-`
+`;
 
 const Loading = () => {
   return(
@@ -41,6 +41,6 @@ const Loading = () => {
       </LoadingMessage>
     </LoadingContainer>
   )
-}
+};
 
 export default Loading;

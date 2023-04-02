@@ -12,15 +12,14 @@ const Title = styled.h1`
   font-size: 36px;
   -webkit-text-fill-color: #fff;
     -webkit-text-stroke: 1px;
-`
+`;
+
 const Header = () => {
   return(
-
     <HeaderContainer>
       <Title>ISS Tracker</Title>
     </HeaderContainer>
-
   )
-}
+};
 
 export default Header;

@@ -22,27 +22,27 @@ const MapProvider = ({ children }: { children?: ReactNode }) => {
     visibility: '',
     timestamp: 0,
     loading: true
-  })
+  });
 
   const [tileLayer, setTileLayer] = useState<ITileLayer>({
     url: LayerURLs.street,
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3'],
     key: LayerKeys.terrain
-  })
+  });
 
   const [center, setCenter] = useState<ICenter>({
     latitude: 0,
     longitude: 0,
     key: 'start'
-
-  })
+  });
 
   const mapState = {
     tileLayer,
     center,
     status
   };
+  
   const mapActions = {
     setTileLayer,
     setCenter,

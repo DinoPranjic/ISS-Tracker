@@ -5,17 +5,26 @@ import { useMapContext } from '../context/mapContext';
 import Loading from "./Loading";
 import Status from "./Status";
 import LayerPicker from "./LayerPicker";
-import CenterControl from "./CenterControl";
 
 const MainContainer = styled.div`
   display: flex;
   justify-content: space-between;
-`
+
+  @media(max-width: 1100px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
 const MapContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 20px;
+
+  @media(max-width: 1100px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const ControlContainer = styled.div`
@@ -32,17 +41,34 @@ const ControlContainer = styled.div`
     border: 0.5px solid black;
     width: 100%;
   }
+
+  @media(max-width: 1100px) {
+    flex-direction: row;
+    margin-bottom: 20px;
+
+    hr {
+      display: none;
+    }
+  }
 `;
 
 const Title = styled.h1`
   color: black;
   font-size: 24px;
+
+  @media(max-width: 1100px) {
+    display: none;
+  }
 `;
 
 const Description = styled.p`
   color: black;
   font-size: 18px;
-`
+
+  @media(max-width: 1100px) {
+    display: none;
+  }
+`;
 
 const AppContainer = () => {
   const { mapState } = useMapContext();
@@ -58,15 +84,14 @@ const AppContainer = () => {
           <hr />
           <Title>Map View</Title>
           <LayerPicker />
-          {/* <CenterControl /> */}
         </ControlContainer>
-      <MapContainer>
-        <Map />
-      </MapContainer> 
+          <MapContainer>
+            <Map />
+          </MapContainer> 
       </MainContainer>
     }
     </>
   )
-}
+};
 
 export default AppContainer;

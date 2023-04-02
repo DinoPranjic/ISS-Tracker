@@ -6,13 +6,12 @@ import { ITileLayer } from "../context/types";
 const LayerPickerContainer = styled.div`
   display: flex;
   justify-content: center;
-
-`
+`;
 
 const Title = styled.h2`
   font-size: 20px;
   font-weight: bold;
-`
+`;
 
 const LayerButton = styled.button`
   cursor: pointer;
@@ -29,13 +28,17 @@ const LayerButton = styled.button`
   :hover {
     background:#0050b3;
   }
-`
+`;
 
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-`
+
+  @media(max-width: 1100px) {
+    margin-top: 0px;
+  }
+`;
 
 const LayerPicker = () => {
   const { mapActions } = useMapContext();
@@ -57,11 +60,8 @@ const LayerPicker = () => {
       <LayerButton onClick={() => {changeView(satelliteLayer)}}>Satellite</LayerButton>
       <LayerButton onClick={() => {changeView(hybridLayer)}}>Hybrid</LayerButton>
       </ButtonContainer>
-
-
-      {/* <p><strong>View:</strong> <button onClick={() => {changeView(streetLayer)}}>Street</button> | <button onClick={() => {changeView(hybridLayer)}}>Hybrid</button> | <button onClick={() => {changeView(satelliteLayer)}}>Satellite</button> | <button onClick={() => {changeView(terrainLayer)}}>Terrain</button></p> */}
     </LayerPickerContainer>
   )
-}
+};
 
 export default LayerPicker;

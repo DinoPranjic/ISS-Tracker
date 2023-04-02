@@ -5,28 +5,36 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-`
+
+  @media(max-width: 1100px) {
+    margin-top: 10px;
+  }
+`;
 
 const StatusContainer = styled.div`
   display: flex;
   align-items: center;
-`
+`;
 
 const StatusTitle = styled.h3`
   font-size: 18px;
   font-weight: bold;
-`
+`;
 
 const StatusResult = styled.span `
   font-size: 18px;
   margin-left: 5px;
-`
+
+  @media(max-width: 1100px) {
+    margin-left: 0px;
+  }
+`;
 
 const Visibility = styled.span`
   display: block;
   font-size: 18px;
   margin-top: 20px;
-`
+`;
 
 const Status = () => {
   const { mapState } = useMapContext();
@@ -50,9 +58,8 @@ const Status = () => {
       
       <Visibility>The ISS is currently in {mapState.status.visibility === 'daylight' ? (<strong>daylight.</strong>) : (<strong>the Earth's shadow.</strong>)}</Visibility>
 
-
     </MainContainer>
   )
-}
+};
 
 export default Status;

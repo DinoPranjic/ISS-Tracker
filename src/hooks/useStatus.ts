@@ -7,7 +7,7 @@ const useStatus = () => {
 
   const getStatus = (url: string) => {
     return fetch(url)
-  }
+  };
 
   const trackISS = () => {
     getStatus(url).then(async result => {
@@ -30,15 +30,15 @@ const useStatus = () => {
       });
 
     });
-  }
+  };
 
   const updateStatus = () => {
     setInterval(trackISS, 5000);
-  }
+  };
 
   useEffect(() => {
     updateStatus();
   }, [])
-}
+};
 
 export default useStatus;
