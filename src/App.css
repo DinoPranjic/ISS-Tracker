@@ -13,12 +13,17 @@ div, h1, h2, h3, p, body, a, header, span, svg, ul {
 }
 
 .leaflet-container {
-  width: 70vw; 
+  width: 70vw;
   height: 40vw;
   border-radius: 10px;
   border: 1px solid black;
-  /* border: #36393F 2px solid;
-  border-radius: 5%; */
+}
+
+@media (max-width: 1100px) {
+  .leaflet-container {
+    width: 100%;
+    min-width: 100%;
+  }
 }
 
 .iss-icon {

@@ -6,7 +6,7 @@ const MainContainer = styled.div`
   flex-direction: column;
   margin-top: 20px;
 
-  @media(max-width: 1100px) {
+  @media (max-width: 1100px) {
     margin-top: 10px;
   }
 `;
@@ -25,7 +25,7 @@ const StatusResult = styled.span `
   font-size: 18px;
   margin-left: 5px;
 
-  @media(max-width: 1100px) {
+  @media (max-width: 1100px) {
     margin-left: 0px;
   }
 `;
